@@ -46,7 +46,6 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
@@ -561,26 +560,11 @@ body {
 /* ---------- Footer ---------- */
 .footer {
   text-align: center;
-  padding: 24px 0 90px;
+  padding: 24px 0;
   font-size: 12.5px;
   color: var(--text-dim);
   background: var(--bg-alt);
 }
-
-/* ---------- Sticky mobile CTA ---------- */
-.sticky-cta {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 40;
-  padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
-  background: color-mix(in srgb, var(--bg) 92%, transparent);
-  backdrop-filter: blur(10px);
-  border-top: 1px solid var(--border);
-  display: none;
-}
-.sticky-cta.show { display: block; }
 
 /* ---------- Responsive ---------- */
 @media (min-width: 640px) {
@@ -592,7 +576,6 @@ body {
   .for-card { flex: 1; }
   .fail-grid { flex-direction: row; }
   .fail-card { flex: 1; }
-  .sticky-cta { display: none !important; }
 }
 
 @media (min-width: 900px) {

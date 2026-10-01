@@ -54,20 +54,3 @@ document.querySelectorAll(".cta-btn").forEach((btn) => {
       }
     });
 })();
-
-// --- STICKY MOBILE CTA -----------------------------------------------
-(function () {
-  const sticky = document.getElementById("sticky-cta");
-  const hero = document.querySelector(".hero");
-  if (!sticky || !hero) return;
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        sticky.classList.toggle("show", !entry.isIntersecting);
-      });
-    },
-    { threshold: 0 }
-  );
-  observer.observe(hero);
-})();
